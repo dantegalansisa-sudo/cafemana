@@ -14,7 +14,7 @@ export default function TiendaSection() {
       price: 450,
       weight: '250g',
       description: 'Tostado medio, perfecto para tu día a día',
-      image: '/images/bolsa-01.jpeg',
+      image: '/images/carrito.png',
     },
     {
       id: 'bolsa-500g',
@@ -22,7 +22,7 @@ export default function TiendaSection() {
       price: 850,
       weight: '500g',
       description: 'Tostado artesanal, notas de chocolate y caramelo',
-      image: '/images/bolsa-02.jpeg',
+      image: '/images/carrito.png',
     },
     {
       id: 'bolsa-1kg',
@@ -30,7 +30,7 @@ export default function TiendaSection() {
       price: 1600,
       weight: '1kg',
       description: 'El mejor valor para toda la familia',
-      image: '/images/bolsa-03.jpeg',
+      image: '/images/carrito.png',
     },
     {
       id: 'bolsa-especial',
@@ -38,7 +38,7 @@ export default function TiendaSection() {
       price: 950,
       weight: '500g',
       description: 'Cosecha limitada de alta montaña',
-      image: '/images/bolsa-04.jpeg',
+      image: '/images/carrito.png',
     },
     {
       id: 'bolsa-organico',
@@ -46,7 +46,7 @@ export default function TiendaSection() {
       price: 1100,
       weight: '500g',
       description: '100% orgánico, certificación internacional',
-      image: '/images/bolsa-05.jpeg',
+      image: '/images/carrito.png',
     },
     {
       id: 'bolsa-regalo',
@@ -54,7 +54,7 @@ export default function TiendaSection() {
       price: 2400,
       weight: '3x250g',
       description: 'Tres variedades en presentación especial',
-      image: '/images/bolsa-06.jpeg',
+      image: '/images/carrito.png',
     },
   ];
 
