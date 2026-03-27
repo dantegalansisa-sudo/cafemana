@@ -1,0 +1,254 @@
+.blog {
+  padding: 100px 0;
+  background: white;
+}
+
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(107, 58, 31, 0.08);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(107, 58, 31, 0.15);
+}
+
+.blog-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, #faf6f0 0%, #f0e6d6 100%);
+}
+
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.1);
+}
+
+.blog-card__category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--color-accent);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-card__content {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card__meta {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.blog-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.blog-card__excerpt {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+  flex: 1;
+}
+
+.blog-card__btn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+.blog-card__btn:hover {
+  color: var(--color-accent);
+}
+
+/* Newsletter */
+.blog__newsletter {
+  margin-top: 80px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #5a2f19 100%);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.newsletter-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: white;
+  margin: 0 0 16px 0;
+}
+
+.newsletter-content > p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto 16px auto;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 16px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-accent);
+}
+
+.newsletter-btn {
+  padding: 16px 32px;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+  background: var(--color-accent-dark, #b08509);
+  box-shadow: 0 4px 12px rgba(200, 150, 12, 0.4);
+}
+
+.newsletter-privacy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .blog {
+    padding: 60px 0;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .blog-card__content {
+    padding: 24px;
+  }
+
+  .blog-card__title {
+    font-size: 20px;
+  }
+
+  .blog-card__excerpt {
+    font-size: 14px;
+  }
+
+  .blog__newsletter {
+    margin-top: 60px;
+    padding: 40px 24px;
+  }
+
+  .newsletter-content h3 {
+    font-size: 28px;
+  }
+
+  .newsletter-content > p {
+    font-size: 16px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter-input,
+  .newsletter-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-card__category {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .blog-card__title {
+    font-size: 18px;
+  }
+
+  .newsletter-content h3 {
+    font-size: 24px;
+  }
+
+  .newsletter-content > p {
+    font-size: 14px;
+  }
+}

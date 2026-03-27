@@ -1,0 +1,224 @@
+.tiendas {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #faf6f0 0%, #ffffff 100%);
+}
+
+.tiendas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.tienda-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(107, 58, 31, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.tienda-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(107, 58, 31, 0.15);
+}
+
+.tienda-card__badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #b08509 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.tienda-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 24px 0;
+  line-height: 1.3;
+}
+
+.tienda-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.tienda-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.tienda-info-item svg {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  margin-top: 2px;
+}
+
+.tienda-info-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 4px 0;
+}
+
+.tienda-info-value {
+  font-size: 15px;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tienda-card__btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+}
+
+.tienda-card__btn:hover {
+  background: var(--color-primary-dark, #5a2f19);
+  box-shadow: 0 4px 12px rgba(107, 58, 31, 0.3);
+}
+
+/* Mapa */
+.tiendas__map {
+  margin-top: 80px;
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 8px 32px rgba(107, 58, 31, 0.1);
+}
+
+.map-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+}
+
+.map-info {
+  background: linear-gradient(135deg, #faf6f0 0%, #f0e6d6 100%);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+}
+
+.map-info__text {
+  font-size: 16px;
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.7;
+}
+
+.map-info__hours {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.map-info__hours strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tiendas {
+    padding: 60px 0;
+  }
+
+  .tiendas__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .tienda-card {
+    padding: 24px;
+  }
+
+  .tienda-card__name {
+    font-size: 20px;
+  }
+
+  .tienda-info-value {
+    font-size: 14px;
+  }
+
+  .tiendas__map {
+    margin-top: 60px;
+    padding: 24px;
+  }
+
+  .map-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .map-container iframe {
+    height: 350px !important;
+  }
+
+  .map-info {
+    padding: 20px;
+  }
+
+  .map-info__text {
+    font-size: 14px;
+  }
+
+  .map-info__hours {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tienda-card {
+    padding: 20px;
+  }
+
+  .tienda-card__name {
+    font-size: 18px;
+  }
+
+  .tienda-card__badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .map-container iframe {
+    height: 300px !important;
+  }
+}

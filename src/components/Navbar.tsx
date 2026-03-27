@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import CartButton from './CartButton';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -15,12 +16,12 @@ export default function Navbar() {
   const leftLinks = [
     { href: '#inicio', label: 'Inicio' },
     { href: '#historia', label: 'Nuestra Historia' },
-    { href: '#producto', label: 'El Café' },
+    { href: '#tienda', label: 'Tienda' },
   ];
 
   const rightLinks = [
-    { href: '#proceso', label: 'Del Campo a Tu Taza' },
-    { href: '#testimonios', label: 'Testimonios' },
+    { href: '#blog', label: 'Blog' },
+    { href: '#tiendas', label: 'Tiendas' },
     { href: '#contacto', label: 'Contacto' },
   ];
 
@@ -54,6 +55,11 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Cart button */}
+        <div className="navbar__cart">
+          <CartButton />
+        </div>
 
         {/* Hamburger mobile */}
         <button
