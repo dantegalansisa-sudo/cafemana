@@ -1,0 +1,100 @@
+.about {
+  padding: var(--section-padding);
+  background: var(--color-bg);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about__img-wrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-2), var(--color-bg));
+  padding: 32px;
+}
+
+.about__img {
+  width: auto;
+  height: 500px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.6s ease;
+  filter: drop-shadow(0 10px 30px rgba(107, 58, 31, 0.15));
+}
+
+.about__img-wrap:hover .about__img {
+  transform: scale(1.02);
+}
+
+/* Ornamento dorado sobre la imagen */
+.about__img-badge {
+  position: absolute;
+  bottom: 32px;
+  right: -24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-warm);
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.about__img-badge-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  display: block;
+}
+
+.about__img-badge-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-top: 4px;
+}
+
+.about__content {
+}
+
+.about__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  line-height: 1.6;
+  margin: 28px 0;
+  padding-left: 24px;
+  border-left: 3px solid var(--color-accent);
+}
+
+.about__text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-mid);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about__img-badge {
+    right: 16px;
+  }
+}

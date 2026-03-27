@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+
+/* ═══════════════════════════════════════════════════════════
+   CAFÉ MANÁ — VARIABLES DE DISEÑO
+   Concepto: "RAÍCES DE OCOA"
+   Paleta: Cálida, natural, artesanal
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Fondos — NUNCA fondos muy oscuros ── */
+  --color-bg:            #FAF6F0;   /* crema cálida — fondo principal */
+  --color-bg-2:          #F3EBE0;   /* crema más oscura — secciones alternas */
+  --color-bg-dark:       #3D2314;   /* marrón café profundo — solo para footer y overlays */
+  --color-surface:       #FFFFFF;   /* blanco puro para cards */
+
+  /* ── Principales ── */
+  --color-primary:       #6B3A1F;   /* café tostado oscuro */
+  --color-primary-rgb:   107, 58, 31;
+  --color-primary-light: #9B6240;   /* café medio */
+  --color-secondary:     #3A6B2A;   /* verde cafetal */
+  --color-secondary-rgb: 58, 107, 42;
+  --color-accent:        #C8960C;   /* dorado cosecha */
+  --color-accent-rgb:    200, 150, 12;
+
+  /* ── Texto ── */
+  --color-text:          #2C1810;   /* marrón muy oscuro (no negro puro) */
+  --color-text-mid:      #5C3D2E;   /* marrón medio */
+  --color-text-muted:    #8B6B55;   /* marrón suave */
+  --color-text-light:    #FAF6F0;   /* crema para texto sobre fondos oscuros */
+
+  /* ── Bordes y detalles ── */
+  --color-border:        rgba(107, 58, 31, 0.15);
+  --color-border-warm:   rgba(200, 150, 12, 0.25);
+  --color-overlay-hero:  rgba(44, 24, 10, 0.45); /* overlay SUAVE sobre hero */
+
+  /* ── WhatsApp ── */
+  --whatsapp-green:      #25D366;
+
+  /* ── Sombras cálidas ── */
+  --shadow-card:     0 8px 32px rgba(107, 58, 31, 0.10);
+  --shadow-hover:    0 16px 48px rgba(107, 58, 31, 0.20);
+  --shadow-gold:     0 8px 24px rgba(200, 150, 12, 0.30);
+
+  /* ── Spacing ── */
+  --section-padding: 120px 0;
+  --container-max:   1320px;
+  --container-pad:   0 64px;
+  --radius-card:     20px;
+  --radius-btn:      50px;
+
+  /* ── Transiciones ── */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+  --transition-slow: 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* ── Tipografía ── */
+  --font-display: 'Playfair Display', Georgia, serif;  /* titulares elegantes */
+  --font-body:    'Lato', sans-serif;                  /* cuerpo legible */
+
+  /* ── Tamaños ── */
+  --text-hero:  clamp(3rem, 6.5vw, 6rem);
+  --text-h1:    clamp(2.2rem, 4.5vw, 4rem);
+  --text-h2:    clamp(1.7rem, 3vw, 2.8rem);
+  --text-h3:    clamp(1.1rem, 2vw, 1.4rem);
+  --text-body:  1rem;
+  --text-sm:    0.875rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESET Y BASE
+   ═══════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════════════════ */
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-pad);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION HEADERS
+   ═══════════════════════════════════════════════════════════ */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '—';
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════════════════════ */
+
+.btn-primary {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  background: var(--color-primary);
+  padding: 16px 36px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  background: transparent;
+  padding: 14px 34px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  transform: translateY(-3px);
+}
+
+.btn-gold {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--color-accent);
+  padding: 16px 36px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-gold:hover {
+  background: #D4A50E;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ORNAMENTO DECORATIVO
+   ═══════════════════════════════════════════════════════════ */
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent));
+}
+
+.ornament::after {
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+}
+
+.ornament-icon {
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 3px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root {
+    --container-pad: 0 24px;
+    --section-padding: 80px 0;
+  }
+}

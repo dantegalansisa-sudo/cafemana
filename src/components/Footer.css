@@ -1,0 +1,115 @@
+.footer {
+  padding: 80px 0 40px;
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at 20% 50%,
+    rgba(200, 150, 12, 0.06) 0%,
+    transparent 60%
+  ), radial-gradient(
+    circle at 80% 50%,
+    rgba(107, 58, 31, 0.15) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.footer__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer__logo {
+  text-align: center;
+}
+
+.footer__logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer__tagline {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__nav a {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  letter-spacing: 0.03em;
+}
+
+.footer__nav a:hover {
+  color: var(--color-accent);
+}
+
+.footer__divider {
+  width: 100%;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  opacity: 0.3;
+}
+
+.footer__bottom {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__credit-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.footer__credit-link:hover {
+  color: #D4A50E;
+}
+
+@media (max-width: 768px) {
+  .footer__nav {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

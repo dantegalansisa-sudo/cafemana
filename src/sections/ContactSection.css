@@ -1,0 +1,57 @@
+.contact {
+  padding: var(--section-padding);
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textura sutil de fondo */
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at 20% 50%,
+    rgba(200, 150, 12, 0.06) 0%,
+    transparent 60%
+  ), radial-gradient(
+    circle at 80% 50%,
+    rgba(107, 58, 31, 0.15) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.contact__content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact .section-title {
+  color: var(--color-text-light);
+}
+
+.contact .section-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact__ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+.contact__info {
+  margin-top: 48px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.50);
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

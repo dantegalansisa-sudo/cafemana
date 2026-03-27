@@ -1,0 +1,93 @@
+.founder {
+  padding: var(--section-padding);
+  background: var(--color-bg);
+}
+
+.founder__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.founder__img-wrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.founder__img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 4px;
+  display: block;
+  box-shadow: var(--shadow-hover);
+  transition: transform 0.6s ease;
+}
+
+.founder__img-wrap:hover .founder__img {
+  transform: scale(1.02);
+}
+
+.founder__badge {
+  position: absolute;
+  bottom: -24px;
+  left: 32px;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(107, 58, 31, 0.3);
+}
+
+.founder__name {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.founder__role {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.founder__text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-mid);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.founder__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  line-height: 1.6;
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: var(--color-bg-2);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 900px) {
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
