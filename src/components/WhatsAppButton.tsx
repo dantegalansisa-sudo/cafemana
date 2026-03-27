@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
-  // Placeholder hasta tener el número real
-  const whatsappNumber = '18498864256';
+  const whatsappNumber = '18498569800';
   const message = encodeURIComponent('Hola! Me interesa conocer más sobre Café Maná');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import './ContactSection.css';
 
 export default function ContactSection() {
-  const whatsappNumber = '18498864256';
+  const whatsappNumber = '18498569800';
   const message = encodeURIComponent('Hola! Me interesa conocer más sobre Café Maná');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 

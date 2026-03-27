@@ -8,7 +8,7 @@ export default function TiendasSection() {
       name: 'Tienda Principal - Ocoa',
       address: 'Calle Principal, San José de Ocoa',
       city: 'San José de Ocoa, República Dominicana',
-      phone: '+1 (809) 555-1234',
+      phone: '+1 (849) 856-9800',
       hours: 'Lun - Sáb: 8:00 AM - 6:00 PM',
       type: 'Tienda y Tostador',
     },
@@ -17,7 +17,7 @@ export default function TiendasSection() {
       name: 'Punto de Venta - Santo Domingo',
       address: 'Av. Abraham Lincoln #952',
       city: 'Santo Domingo, República Dominicana',
-      phone: '+1 (809) 555-5678',
+      phone: '+1 (849) 856-9800',
       hours: 'Lun - Dom: 9:00 AM - 8:00 PM',
       type: 'Punto de Venta',
     },
@@ -26,7 +26,7 @@ export default function TiendasSection() {
       name: 'Café Maná - Santiago',
       address: 'Calle del Sol #45',
       city: 'Santiago de los Caballeros',
-      phone: '+1 (809) 555-9012',
+      phone: '+1 (849) 856-9800',
       hours: 'Lun - Sáb: 7:00 AM - 7:00 PM',
       type: 'Cafetería y Venta',
     },
@@ -178,7 +178,7 @@ export default function TiendasSection() {
             </p>
             <p className="map-info__hours">
               <strong>Visitas al Tostador:</strong> Agenda tu visita guiada llamando
-              al +1 (809) 555-1234
+              al +1 (849) 856-9800
             </p>
           </div>
         </motion.div>

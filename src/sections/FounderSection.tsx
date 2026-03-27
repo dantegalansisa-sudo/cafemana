@@ -15,11 +15,11 @@ export default function FounderSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="section-eyebrow">Nuestro Fundador</div>
-            <h2 className="founder__name">Edward Santana</h2>
+            <h2 className="founder__name">Edward Olaverria Casado</h2>
             <p className="founder__role">Fundador & CEO · Café Maná · San José de Ocoa</p>
 
             <p className="founder__text">
-              Nacido y criado en San José de Ocoa, Edward Santana creció entre los cafetales
+              Nacido y criado en San José de Ocoa, Edward Olaverria Casado creció entre los cafetales
               que rodean las montañas dominicanas. Desde niño, aprendió a valorar el trabajo
               arduo y la dedicación que requiere cultivar café de calidad excepcional.
             </p>
@@ -53,7 +53,7 @@ export default function FounderSection() {
           >
             <img
               src="/images/ceo.png"
-              alt="Edward Santana - Fundador de Café Maná"
+              alt="Edward Olaverria Casado - Fundador de Café Maná"
               className="founder__img"
             />
             <div className="founder__badge">☕ Fundador · Ocoa, RD</div>
