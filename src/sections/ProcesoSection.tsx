@@ -8,7 +8,7 @@ export default function ProcesoSection() {
       icon: '🌱',
       title: 'La Cosecha',
       text: 'Con manos expertas, seleccionamos solo los granos maduros en el punto perfecto. Cada cereza de café es cuidadosamente escogida para garantizar la máxima calidad desde el inicio.',
-      img: '/images/bolsa-04.png',
+      img: '/images/la cosecha.jpg',
       reverse: false,
     },
     {
@@ -16,7 +16,7 @@ export default function ProcesoSection() {
       icon: '☕',
       title: 'El Tostado',
       text: 'Un proceso artesanal que transforma cada grano en una obra maestra. Controlamos cuidadosamente la temperatura y el tiempo para desarrollar los sabores y aromas característicos de Café Maná.',
-      img: '/images/bolsa-05.png',
+      img: '/images/tostado.jpg',
       reverse: true,
     },
     {
