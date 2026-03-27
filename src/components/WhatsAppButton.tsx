@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
   const whatsappNumber = '18498569800';
-  const message = encodeURIComponent('Hola! Me interesa conocer más sobre Café Maná');
+  const message = encodeURIComponent('Hola! Vengo de la página web de Café Maná (https://cafemana.vercel.app/) y me interesa conocer más sobre sus productos');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
